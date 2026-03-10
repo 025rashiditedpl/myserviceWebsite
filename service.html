@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electroport · home electrical services</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #f7fafd;
+      color: #1a2639;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header / navigation */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0b2b40;
+    }
+
+    .logo i {
+      color: #f6b83e;
+      font-size: 2.2rem;
+      background: #0b2b40;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e3b4f;
+      transition: color 0.2s;
+      font-size: 1.05rem;
+    }
+
+    .nav-links a:hover {
+      color: #f6b83e;
+    }
+
+    /* contact info badge */
+    .contact-badge {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #e9f2f9;
+      padding: 8px 18px;
+      border-radius: 60px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #0b2b40;
+    }
+    .contact-badge i {
+      color: #f6b83e;
+      margin-right: 6px;
+    }
+    .contact-badge a {
+      text-decoration: none;
+      color: #0b2b40;
+    }
+    .contact-badge a:hover {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    /* hero section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 0 60px;
+    }
+
+    .hero-content {
+      flex: 1 1 350px;
+    }
+
+    .hero-content .tagline {
+      background: #e5f2fa;
+      color: #0f4662;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 8px 18px;
+      border-radius: 60px;
+      display: inline-block;
+      margin-bottom: 24px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #0b2b40;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 span {
+      color: #f6b83e;
+      background: #0b2b40;
+      padding: 0 8px;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: #2d4b61;
+      max-width: 500px;
+      margin-bottom: 32px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 35px;
+      margin-top: 30px;
+    }
+
+    .stat-item h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0f4662;
+    }
+
+    .stat-item p {
+      color: #4f6b7c;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      background: linear-gradient(145deg, #d4e8f5, #ffffff);
+      padding: 20px 20px 0 20px;
+      border-radius: 80px 80px 40px 40px;
+      box-shadow: 0 30px 40px -20px rgba(0,40,60,0.3);
+      text-align: center;
+    }
+
+    .hero-image i {
+      font-size: 12rem;
+      color: #1e3b4f;
+      filter: drop-shadow(8px 16px 12px rgba(0,0,0,0.1));
+    }
+
+    /* services section */
+    .services {
+      padding: 80px 0 40px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 50px;
+    }
+
+    .section-header h2 {
+      font-size: 2.4rem;
+      color: #0b2b40;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: #3d5e74;
+      font-size: 1.1rem;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 36px;
+      padding: 32px 24px;
+      box-shadow: 0 16px 30px -8px rgba(18, 52, 77, 0.12);
+      transition: all 0.25s ease;
+      border: 1px solid #eaf1f7;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #f6b83e;
+      box-shadow: 0 30px 40px -12px #1e3b4f33;
+    }
+
+    .card-icon {
+      background: #e3f0f9;
+      width: 84px;
+      height: 84px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.5rem;
+      color: #0f4662;
+      transition: 0.2s;
+    }
+
+    .service-card:hover .card-icon {
+      background: #f6b83e;
+      color: #0b2b40;
+    }
+
+    .service-card h3 {
+      font-size: 1.55rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #0b2b40;
+    }
+
+    .service-card p {
+      color: #3d637b;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* small electrical card (extra highlight) */
+    .service-card.highlight {
+      background: #0b2b40;
+      border-color: #0b2b40;
+    }
+
+    .service-card.highlight h3,
+    .service-card.highlight p {
+      color: white;
+    }
+
+    .service-card.highlight .card-icon {
+      background: #f6b83e;
+      color: #0b2b40;
+    }
+
+    /* why us / features */
+    .features {
+      padding: 70px 0;
+      margin: 40px 0;
+      background: #e5f0f8;
+      border-radius: 100px 0 100px 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .feature-item i {
+      font-size: 2.8rem;
+      background: white;
+      padding: 20px;
+      border-radius: 50%;
+      color: #0b2b40;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 14px #b0c8da55;
+    }
+
+    .feature-item h4 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #0f3a4f;
+    }
+
+    .feature-item p {
+      color: #2b5777;
+    }
+
+    /* CTA / contact */
+    .cta-section {
+      background: white;
+      border-radius: 60px;
+      padding: 60px 40px;
+      margin: 60px 0 80px;
+      box-shadow: 0 20px 35px #cbdae74d;
+      border: 1px solid #cfdeec;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cta-left h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0b2b40;
+      margin-bottom: 15px;
+    }
+
+    .cta-left p {
+      color: #2f5570;
+      font-size: 1.15rem;
+      max-width: 480px;
+    }
+
+    .cta-btn {
+      background: #f6b83e;
+      color: #0b2b40;
+      border: none;
+      padding: 16px 50px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 80px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 12px 24px -12px #f6b83e;
+      transition: 0.2s;
+      cursor: default;
+      text-decoration: none; /* for link */
+    }
+
+    .cta-btn i {
+      font-size: 1.6rem;
+    }
+
+    .cta-btn:hover {
+      background: #e0a432;
+      transform: scale(1.02);
+    }
+
+    /* footer */
+    .footer {
+      border-top: 1px solid #c9deec;
+      padding: 40px 0 30px;
+      color: #2a4b66;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .footer-copy {
+      font-weight: 400;
+    }
+
+    .footer-social i {
+      font-size: 1.7rem;
+      margin: 0 12px;
+      color: #1e3b4f;
+      transition: color 0.2s;
+      cursor: default;
+    }
+
+    .footer-social i:hover {
+      color: #f6b83e;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, #c9deec, transparent);
+      margin: 30px 0 25px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      font-size: 1.05rem;
+    }
+
+    .contact-details a {
+      text-decoration: none;
+      color: #1e3b4f;
+      font-weight: 500;
+    }
+
+    .contact-details i {
+      color: #f6b83e;
+      width: 28px;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-image i {
+        font-size: 9rem;
+      }
+      .cta-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+      }
+      .contact-badge {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- header navigation with contact details -->
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fas fa-bolt"></i> 
+        <span>Electroport</span>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Reviews</a>
+      </div>
+      <!-- contact badge (phone & email) -->
+      <div class="contact-badge">
+        <a href="tel:9562912668"><i class="fas fa-phone-alt"></i> 9562912668</a>
+        <span>|</span>
+        <a href="mailto:muhammadrashidkp64@gmail.com"><i class="fas fa-envelope"></i> muhammadrashidkp64</a>
+      </div>
+    </nav>
+
+    <!-- hero / main intro -->
+    <div class="hero">
+      <div class="hero-content">
+        <span class="tagline"><i class="fas fa-shield-alt" style="margin-right: 6px;"></i> trusted by 2.5k+ homes</span>
+        <h1>Spark & <span>safe</span><br>electrical care</h1>
+        <p class="hero-desc">Professional, small‑scale electrical solutions – from fan & light fitting to pump set and switchboard repairs. Fast, reliable, local.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>years exp.</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.9</h3>
+            <p>★ rating</p>
+          </div>
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>support</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-charging-station"></i>
+        <!-- decorative plug icon -->
+        <div style="font-size: 2rem; margin-top: -15px; color: #f6b83e;"><i class="fas fa-plug"></i> <i class="fas fa-fan"></i></div>
+      </div>
+    </div>
+  </div> <!-- end container for header/nav -->
+
+  <!-- services grid (full width background) -->
+  <div style="background: white;">
+    <div class="container services">
+      <div class="section-header">
+        <h2>⚡ our main services</h2>
+        <p>Everything from a flickering switch to a new pump – we cover all small‑scale household electrical needs.</p>
+      </div>
+      <div class="service-grid">
+        <!-- fan fitting -->
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-fan"></i></div>
+          <h3>Fan fitting</h3>
+          <p>Ceiling, exhaust, or pedestal – installation, balancing, and speed regulator repair.</p>
+        </div>
+        <!-- light fitting -->
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Light fitting</h3>
+          <p>LED, chandeliers, strips, and fixtures. Mounting, wiring & dimmer setup.</p>
+        </div>
+        <!-- switchboard complaints -->
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-toggle-on"></i></div>
+          <h3>Switchboard complaints</h3>
+          <p>Faulty switches, MCB tripping, socket replacement, and board upgrade.</p>
+        </div>
+        <!-- pump set complaints - FIXED with solid pump icon (fa-pump-water) -->
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-pump-water"></i></div>
+          <h3>Pump set complaints</h3>
+          <p>Borewell, water pressure pumps, pressure tank, starters, and wiring checks.</p>
+        </div>
+        <!-- household outdoor wiring -->
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-tree"></i></div>
+          <h3>Household outdoor wiring</h3>
+          <p>Garden lights, outdoor sockets, gate wiring, weatherproof conduit & fixtures.</p>
+        </div>
+        <!-- household small scale electrical complaints (highlighted) -->
+        <div class="service-card highlight">
+          <div class="card-icon"><i class="fas fa-tools"></i></div>
+          <h3>Small scale electrical</h3>
+          <p>Any minor issue: geyser not working, inverter plug, wire change, fuse blows — we fix it.</p>
+        </div>
+        <!-- extra safety card -->
+        <div class="service-card">
+          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Safety check</h3>
+          <p>Earthing test, leakage, old wiring inspection – free with every service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- features / why choose us -->
+  <div class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-bolt"></i>
+          <h4>same day</h4>
+          <p>usually within 2 hours</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-wrench"></i>
+          <h4>trained pros</h4>
+          <p>licensed & experienced</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-wallet"></i>
+          <h4>fair pricing</h4>
+          <p>upfront estimates</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-broom"></i>
+          <h4>clean work</h4>
+          <p>no mess left behind</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- cta / contact area with clickable phone & mail -->
+    <div class="cta-section">
+      <div class="cta-left">
+        <h3>got an electrical hiccup?</h3>
+        <p><i class="fas fa-check-circle" style="color: #f6b83e;"></i> Fan, light, switch, pump, outdoor wiring, or any small complaint — we're ready.</p>
+        <!-- inline contact details below CTA text -->
+        <div class="contact-details" style="margin-top: 20px;">
+          <a href="tel:9562912668"><i class="fas fa-phone-alt"></i> 9562912668</a>
+          <a href="mailto:muhammadrashidkp64@gmail.com"><i class="fas fa-envelope"></i> muhammadrashidkp64@gmail.com</a>
+        </div>
+      </div>
+      <!-- book free visit button with phone link -->
+      <a href="tel:9562912668" class="cta-btn" style="cursor: pointer;">
+        <i class="fas fa-phone-alt"></i> book free visit
+      </a>
+    </div>
+
+    <!-- footer with full contact details -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="logo" style="font-size: 1.7rem;">
+          <i class="fas fa-bolt" style="font-size: 2rem;"></i> Electroport
+        </div>
+        <div style="font-weight: 500; display: flex; gap: 20px; flex-wrap: wrap;">
+          <span><i class="fas fa-phone-alt" style="color: #f6b83e;"></i> <a href="tel:9562912668" style="text-decoration: none; color: inherit;">9562912668</a></span>
+          <span><i class="fas fa-envelope" style="color: #f6b83e;"></i> <a href="mailto:muhammadrashidkp64@gmail.com" style="text-decoration: none; color: inherit;">muhammadrashidkp64@gmail.com</a></span>
+        </div>
+        <div class="footer-social">
+          <i class="fab fa-whatsapp"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+      </div>
+      <hr>
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+        <span class="footer-copy">© 2025 Electroport — household electrical experts</span>
+        <span><i class="far fa-clock"></i>  Mon–Sun 8am–10pm</span>
+      </div>
+      <!-- service keywords footer (updated with outdoor wiring) -->
+      <div style="margin-top: 20px; font-size: 0.9rem; color: #4d6f89;">
+        <i class="fas fa-tools"></i> fan fitting · light fitting · switchboard · pump sets · outdoor wiring · small scale electrical complaints
+      </div>
+    </footer>
+  </div>
+  <div style="height: 20px;"></div>
+</body>
+</html>
