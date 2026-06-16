@@ -348,8 +348,7 @@
       gap: 12px;
       box-shadow: 0 12px 24px -12px #f6b83e;
       transition: 0.2s;
-      cursor: default;
-      text-decoration: none; /* for link */
+      text-decoration: none;
     }
 
     .cta-btn i {
@@ -385,7 +384,7 @@
       margin: 0 12px;
       color: #1e3b4f;
       transition: color 0.2s;
-      cursor: default;
+      cursor: pointer;
     }
 
     .footer-social i:hover {
@@ -443,183 +442,197 @@
   </style>
 </head>
 <body>
+<div class="container">
+  <!-- header navigation with contact details -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-bolt"></i>
+      <span>Electroport</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <!-- contact badge (phone & email) -->
+    <div class="contact-badge">
+      <a href="tel:9562912668"><i class="fas fa-phone-alt"></i> 9562912668</a>
+      <span>|</span>
+      <a href="mailto:muhammadrashidkp64@gmail.com"><i class="fas fa-envelope"></i> muhammadrashidkp64</a>
+    </div>
+  </nav>
+
+  <!-- hero / main intro -->
+  <div class="hero">
+    <div class="hero-content">
+      <span class="tagline"><i class="fas fa-shield-alt" style="margin-right: 6px;"></i> trusted by 2.5k+ homes</span>
+      <h1>Spark & <span>safe</span><br>electrical care</h1>
+      <p class="hero-desc">Professional, small‑scale electrical solutions – from fan & light fitting to pump set and switchboard repairs. Fast, reliable, local.</p>
+      <div class="stats">
+        <div class="stat-item">
+          <h3>15+</h3>
+          <p>years exp.</p>
+        </div>
+        <div class="stat-item">
+          <h3>4.9</h3>
+          <p>★ rating</p>
+        </div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>support</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <i class="fas fa-charging-station"></i>
+      <!-- decorative plug icon -->
+      <div style="font-size: 2rem; margin-top: -15px; color: #f6b83e;"><i class="fas fa-plug"></i> <i class="fas fa-fan"></i></div>
+    </div>
+  </div>
+</div> <!-- end container for header/nav -->
+
+<!-- services grid (full width background) -->
+<div style="background: white;" id="services">
+  <div class="container services">
+    <div class="section-header">
+      <h2>⚡ our main services</h2>
+      <p>Everything from a flickering switch to a new pump – we cover all small‑scale household electrical needs.</p>
+    </div>
+    <div class="service-grid">
+      <!-- fan fitting -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-fan"></i></div>
+        <h3>Fan fitting</h3>
+        <p>Ceiling, exhaust, or pedestal – installation, balancing, and speed regulator repair.</p>
+      </div>
+      <!-- light fitting -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+        <h3>Light fitting</h3>
+        <p>LED, chandeliers, strips, and fixtures. Mounting, wiring & dimmer setup.</p>
+      </div>
+      <!-- switchboard complaints -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-toggle-on"></i></div>
+        <h3>Switchboard complaints</h3>
+        <p>Faulty switches, MCB tripping, socket replacement, and board upgrade.</p>
+      </div>
+      <!-- pump set complaints -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-pump-water"></i></div>
+        <h3>Pump set complaints</h3>
+        <p>Borewell, water pressure pumps, pressure tank, starters, and wiring checks.</p>
+      </div>
+      <!-- household outdoor wiring -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-tree"></i></div>
+        <h3>Household outdoor wiring</h3>
+        <p>Garden lights, outdoor sockets, gate wiring, weatherproof conduit & fixtures.</p>
+      </div>
+      <!-- household small scale electrical complaints (highlighted) -->
+      <div class="service-card highlight">
+        <div class="card-icon"><i class="fas fa-tools"></i></div>
+        <h3>Small scale electrical</h3>
+        <p>Any minor issue: geyser not working, inverter plug, wire change, fuse blows — we fix it.</p>
+      </div>
+      <!-- safety check -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Safety check</h3>
+        <p>Earthing test, leakage, old wiring inspection – free with every service.</p>
+      </div>
+
+      <!-- NEW SERVICE 1: Custom Extension Box Making -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-box-open"></i></div>
+        <h3>Custom Extension Box</h3>
+        <p>Tailor‑made power strips, heavy‑duty multi‑socket boxes with individual switches, surge protection, and long cables – built to your needs.</p>
+      </div>
+
+      <!-- NEW SERVICE 2: Retail Electrical & Plumbing Goods DoorStep Delivery -->
+      <div class="service-card">
+        <div class="card-icon"><i class="fas fa-truck"></i></div>
+        <h3>Retail Goods Delivery</h3>
+        <p>Electrical & plumbing supplies – switches, wires, pipes, fittings, geysers, and more. Fast doorstep delivery with genuine brands.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- features / why choose us -->
+<div class="features">
   <div class="container">
-    <!-- header navigation with contact details -->
-    <nav class="navbar">
-      <div class="logo">
-        <i class="fas fa-bolt"></i> 
-        <span>Electroport</span>
+    <div class="features-grid">
+      <div class="feature-item">
+        <i class="fas fa-bolt"></i>
+        <h4>same day</h4>
+        <p>usually within 2 hours</p>
       </div>
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-        <a href="#">Reviews</a>
+      <div class="feature-item">
+        <i class="fas fa-wrench"></i>
+        <h4>trained pros</h4>
+        <p>licensed & experienced</p>
       </div>
-      <!-- contact badge (phone & email) -->
-      <div class="contact-badge">
+      <div class="feature-item">
+        <i class="fas fa-wallet"></i>
+        <h4>fair pricing</h4>
+        <p>upfront estimates</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-broom"></i>
+        <h4>clean work</h4>
+        <p>no mess left behind</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="contact">
+  <!-- cta / contact area with clickable phone & mail -->
+  <div class="cta-section">
+    <div class="cta-left">
+      <h3>got an electrical hiccup?</h3>
+      <p><i class="fas fa-check-circle" style="color: #f6b83e;"></i> Fan, light, switch, pump, outdoor wiring, custom extension boxes, or any small complaint — we're ready. Plus, get electrical & plumbing goods delivered to your door.</p>
+      <!-- inline contact details below CTA text -->
+      <div class="contact-details" style="margin-top: 20px;">
         <a href="tel:9562912668"><i class="fas fa-phone-alt"></i> 9562912668</a>
-        <span>|</span>
-        <a href="mailto:muhammadrashidkp64@gmail.com"><i class="fas fa-envelope"></i> muhammadrashidkp64</a>
-      </div>
-    </nav>
-
-    <!-- hero / main intro -->
-    <div class="hero">
-      <div class="hero-content">
-        <span class="tagline"><i class="fas fa-shield-alt" style="margin-right: 6px;"></i> trusted by 2.5k+ homes</span>
-        <h1>Spark & <span>safe</span><br>electrical care</h1>
-        <p class="hero-desc">Professional, small‑scale electrical solutions – from fan & light fitting to pump set and switchboard repairs. Fast, reliable, local.</p>
-        <div class="stats">
-          <div class="stat-item">
-            <h3>15+</h3>
-            <p>years exp.</p>
-          </div>
-          <div class="stat-item">
-            <h3>4.9</h3>
-            <p>★ rating</p>
-          </div>
-          <div class="stat-item">
-            <h3>24/7</h3>
-            <p>support</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-image">
-        <i class="fas fa-charging-station"></i>
-        <!-- decorative plug icon -->
-        <div style="font-size: 2rem; margin-top: -15px; color: #f6b83e;"><i class="fas fa-plug"></i> <i class="fas fa-fan"></i></div>
+        <a href="mailto:muhammadrashidkp64@gmail.com"><i class="fas fa-envelope"></i> muhammadrashidkp64@gmail.com</a>
       </div>
     </div>
-  </div> <!-- end container for header/nav -->
-
-  <!-- services grid (full width background) -->
-  <div style="background: white;">
-    <div class="container services">
-      <div class="section-header">
-        <h2>⚡ our main services</h2>
-        <p>Everything from a flickering switch to a new pump – we cover all small‑scale household electrical needs.</p>
-      </div>
-      <div class="service-grid">
-        <!-- fan fitting -->
-        <div class="service-card">
-          <div class="card-icon"><i class="fas fa-fan"></i></div>
-          <h3>Fan fitting</h3>
-          <p>Ceiling, exhaust, or pedestal – installation, balancing, and speed regulator repair.</p>
-        </div>
-        <!-- light fitting -->
-        <div class="service-card">
-          <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>Light fitting</h3>
-          <p>LED, chandeliers, strips, and fixtures. Mounting, wiring & dimmer setup.</p>
-        </div>
-        <!-- switchboard complaints -->
-        <div class="service-card">
-          <div class="card-icon"><i class="fas fa-toggle-on"></i></div>
-          <h3>Switchboard complaints</h3>
-          <p>Faulty switches, MCB tripping, socket replacement, and board upgrade.</p>
-        </div>
-        <!-- pump set complaints - FIXED with solid pump icon (fa-pump-water) -->
-        <div class="service-card">
-          <div class="card-icon"><i class="fas fa-pump-water"></i></div>
-          <h3>Pump set complaints</h3>
-          <p>Borewell, water pressure pumps, pressure tank, starters, and wiring checks.</p>
-        </div>
-        <!-- household outdoor wiring -->
-        <div class="service-card">
-          <div class="card-icon"><i class="fas fa-tree"></i></div>
-          <h3>Household outdoor wiring</h3>
-          <p>Garden lights, outdoor sockets, gate wiring, weatherproof conduit & fixtures.</p>
-        </div>
-        <!-- household small scale electrical complaints (highlighted) -->
-        <div class="service-card highlight">
-          <div class="card-icon"><i class="fas fa-tools"></i></div>
-          <h3>Small scale electrical</h3>
-          <p>Any minor issue: geyser not working, inverter plug, wire change, fuse blows — we fix it.</p>
-        </div>
-        <!-- extra safety card -->
-        <div class="service-card">
-          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>Safety check</h3>
-          <p>Earthing test, leakage, old wiring inspection – free with every service.</p>
-        </div>
-      </div>
-    </div>
+    <!-- book appointment button - now links to the Google Form -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTNDQ_a06R9RL5_KY00zzhea2RmtaKeM0il5VtrNO8gMpiYg/viewform?usp=publish-editor" target="_blank" class="cta-btn">
+      <i class="fas fa-calendar-check"></i> book appointment
+    </a>
   </div>
 
-  <!-- features / why choose us -->
-  <div class="features">
-    <div class="container">
-      <div class="features-grid">
-        <div class="feature-item">
-          <i class="fas fa-bolt"></i>
-          <h4>same day</h4>
-          <p>usually within 2 hours</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-wrench"></i>
-          <h4>trained pros</h4>
-          <p>licensed & experienced</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-wallet"></i>
-          <h4>fair pricing</h4>
-          <p>upfront estimates</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-broom"></i>
-          <h4>clean work</h4>
-          <p>no mess left behind</p>
-        </div>
+  <!-- footer with full contact details -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="logo" style="font-size: 1.7rem;">
+        <i class="fas fa-bolt" style="font-size: 2rem;"></i> Electroport
+      </div>
+      <div style="font-weight: 500; display: flex; gap: 20px; flex-wrap: wrap;">
+        <span><i class="fas fa-phone-alt" style="color: #f6b83e;"></i> <a href="tel:9562912668" style="text-decoration: none; color: inherit;">9562912668</a></span>
+        <span><i class="fas fa-envelope" style="color: #f6b83e;"></i> <a href="mailto:muhammadrashidkp64@gmail.com" style="text-decoration: none; color: inherit;">muhammadrashidkp64@gmail.com</a></span>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
-  </div>
-
-  <div class="container">
-    <!-- cta / contact area with clickable phone & mail -->
-    <div class="cta-section">
-      <div class="cta-left">
-        <h3>got an electrical hiccup?</h3>
-        <p><i class="fas fa-check-circle" style="color: #f6b83e;"></i> Fan, light, switch, pump, outdoor wiring, or any small complaint — we're ready.</p>
-        <!-- inline contact details below CTA text -->
-        <div class="contact-details" style="margin-top: 20px;">
-          <a href="tel:9562912668"><i class="fas fa-phone-alt"></i> 9562912668</a>
-          <a href="mailto:muhammadrashidkp64@gmail.com"><i class="fas fa-envelope"></i> muhammadrashidkp64@gmail.com</a>
-        </div>
-      </div>
-      <!-- book free visit button with phone link -->
-      <a href="tel:9562912668" class="cta-btn" style="cursor: pointer;">
-        <i class="fas fa-phone-alt"></i> book free visit
-      </a>
+    <hr>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+      <span class="footer-copy">© 2025 Electroport — household electrical experts</span>
+      <span><i class="far fa-clock"></i>  Mon–Sun 8am–10pm</span>
     </div>
-
-    <!-- footer with full contact details -->
-    <footer class="footer">
-      <div class="footer-grid">
-        <div class="logo" style="font-size: 1.7rem;">
-          <i class="fas fa-bolt" style="font-size: 2rem;"></i> Electroport
-        </div>
-        <div style="font-weight: 500; display: flex; gap: 20px; flex-wrap: wrap;">
-          <span><i class="fas fa-phone-alt" style="color: #f6b83e;"></i> <a href="tel:9562912668" style="text-decoration: none; color: inherit;">9562912668</a></span>
-          <span><i class="fas fa-envelope" style="color: #f6b83e;"></i> <a href="mailto:muhammadrashidkp64@gmail.com" style="text-decoration: none; color: inherit;">muhammadrashidkp64@gmail.com</a></span>
-        </div>
-        <div class="footer-social">
-          <i class="fab fa-whatsapp"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-facebook"></i>
-        </div>
-      </div>
-      <hr>
-      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
-        <span class="footer-copy">© 2025 Electroport — household electrical experts</span>
-        <span><i class="far fa-clock"></i>  Mon–Sun 8am–10pm</span>
-      </div>
-      <!-- service keywords footer (updated with outdoor wiring) -->
-      <div style="margin-top: 20px; font-size: 0.9rem; color: #4d6f89;">
-        <i class="fas fa-tools"></i> fan fitting · light fitting · switchboard · pump sets · outdoor wiring · small scale electrical complaints
-      </div>
-    </footer>
-  </div>
-  <div style="height: 20px;"></div>
+    <!-- service keywords footer -->
+    <div style="margin-top: 20px; font-size: 0.9rem; color: #4d6f89;">
+      <i class="fas fa-tools"></i> fan fitting · light fitting · switchboard · pump sets · outdoor wiring · custom extension box · retail goods delivery · small scale electrical complaints
+    </div>
+  </footer>
+</div>
+<div style="height: 20px;"></div>
 </body>
 </html>
